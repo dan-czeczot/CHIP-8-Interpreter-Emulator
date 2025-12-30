@@ -3,7 +3,6 @@
 
 #include "chip8.h"
 
-
 int main(int argc, char* argv[])
 {
     char* filename;
@@ -24,6 +23,15 @@ int main(int argc, char* argv[])
         return 1;
     }
     
+    chip8_init(file);
+
+    if (fclose(file) != 0)
+    {
+        perror("Error: Could not close file!");
+        return 1;
+    }
+
+    //fetch - decode - execute loop
 
     return 0;
 } 

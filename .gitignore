@@ -1,1 +1,11 @@
+# Ignore object and executable files
+*.o
 *.exe
+*.dll
+*.so
+*.bin
+
+# Ignore files without extensions
+*
+!**/*.* # Keep files with extensions
+!**/ # Keep directories tracked
